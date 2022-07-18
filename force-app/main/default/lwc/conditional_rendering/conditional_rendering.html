@@ -4,4 +4,17 @@
             <h2>Test to show</h2>
         </template>
     </lightning-card>
+
+<hr/>
+
+    <lightning-card title="Conditional Display Check">
+        <lightning-input type="checkbox" label="Click the agreement" checked={Display} onchange={handleChange}> </lightning-input>
+        <template if:true={Display}>
+            <h2>When is it checked</h2>
+        </template>
+
+        <template if:false={Display}>
+            <h2>accept the agreemtns</h2>
+        </template>
+    </lightning-card>
 </template>
