@@ -1,9 +1,20 @@
 <template>
+    <!--list of cities-->
     <lightning-card title="Shaarlardyn tizmegi">
         <h1>{shaarlar}</h1>
-
         <template  for:each={shaarlar} for:item="arBiri">
             <p key={arBiri}>{arBiri}</p>
+        </template>
+    </lightning-card>
+
+    <!--List of customers-->
+    <lightning-card title="UWIS Custmoer List">
+        <template  for:each={customerList} for:item="people">
+            <p style="font-weight:600;" key={people}>{people.name}</p>
+            <p  key={people}>{people.phone}</p>
+            <p  key={people}>{people.email}</p>            
+            <img key={people} src={people.imgURL}/>
+            <hr key={people}>
         </template>
     </lightning-card>
 </template>
