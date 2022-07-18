@@ -2,8 +2,8 @@
     <!--list of cities-->
     <lightning-card title="Shaarlardyn tizmegi">
         <h1>{shaarlar}</h1>
-        <template  for:each={shaarlar} for:item="arBiri">
-            <p key={arBiri}>{arBiri}</p>
+        <template  iterator:it={shaarlar}>
+            <p key={it.value}>{it.value}</p>
         </template>
     </lightning-card>
 
@@ -15,6 +15,23 @@
             <p  key={people}>{people.email}</p>            
             <img key={people} src={people.imgURL}/>
             <hr key={people}>
+        </template>
+    </lightning-card>
+
+    <hr/>
+
+    <!--Loop using iterator-->
+    <!--List of customers-->
+    <lightning-card title="UWIS Custmoer List Iterator">
+        <template  iterator:it={customerList}>
+            <li class="iter" key={it.value}>{it.value.id}</li>
+            <li class="iter" key={it.value}>{it.value.name}</li>
+            <li class="iter" key={it.value}>{it.value.phone}</li>
+            <li class="iter" key={it.value}>{it.value.phone}</li>
+            <li class="iter" key={it.value}><img src={it.value.imgURL}/></li>
+
+            <hr key={it}> 
+            
         </template>
     </lightning-card>
 </template>
