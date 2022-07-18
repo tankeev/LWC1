@@ -1,0 +1,9 @@
+<template>
+    <lightning-card title="Shaarlardyn tizmegi">
+        <h1>{shaarlar}</h1>
+
+        <template  for:each={shaarlar} for:item="arBiri">
+            <p key={arBiri}>{arBiri}</p>
+        </template>
+    </lightning-card>
+</template>
