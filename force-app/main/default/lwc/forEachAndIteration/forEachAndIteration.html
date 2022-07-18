@@ -3,7 +3,8 @@
     <lightning-card title="Shaarlardyn tizmegi">
         <h1>{shaarlar}</h1>
         <template  iterator:it={shaarlar}>
-            <p key={it.value}>{it.value}</p>
+            <p key={it.value} if:true={it.first}>{it.value}</p>
+            <p key={it.value} if:true={it.last}>{it.value}</p>
         </template>
     </lightning-card>
 
