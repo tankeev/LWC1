@@ -1,12 +1,12 @@
 <template>
     <lightning-card>
-        <lightning-input type="text"
-        label="Write your full name"
-        placeholder="your name">        
-        </lightning-input>
-
-        <h1>{fname}</h1>
-        <h1>{lname}</h1>
+        <lightning-input type="number" placeholder="Number 1" onchange={handleChange1}></lightning-input>
+        <lightning-input type="number" placeholder="Number 2" onchange={handleChange2}></lightning-input>
         <h1>{fullNameUpperCs}</h1>
+        <hr/>
+
+
+        <div style="text-decoration-style: solid; font-size: 14px;">--The Output of the entered Values--</div>
+        <h1>sum of {num1} and {num2} is : <b style="color:rgb(0, 0, 0)">{total}</b></h1>    
     </lightning-card>
 </template>
