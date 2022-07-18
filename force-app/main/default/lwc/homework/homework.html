@@ -1,0 +1,20 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <lightning-card title="Pesonal Information" class="card1">
+        <!-- Avatar -->
+        <lightning-avatar variant="circle" src="https://www.lightningdesignsystem.com/assets/images/avatar2.jpg" initials="AW" fallback-icon-name="standard:person_account" alternative-text="Amy Weaver" class="slds-m-right_small"></lightning-avatar>
+        <lightning-badge label="Azamat Tankeev"></lightning-badge>
+        <!-- Button -->      
+        <lightning-button variant="brand-outline" label="Brand Outline" title="Primary action with lighter look" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>        
+    </lightning-card>
+<hr/>
+    <lightning-card title="onblur">
+    <h1>Name: {Name}</h1>
+
+        <lightning-input type="text"
+        label="Enter Your Name"
+        placeholder="Enter Your Name"
+        onblur={handleBlur}></lightning-input> 
+
+    </lightning-card>
+</template>
