@@ -24,6 +24,20 @@ get total(){
     return `${parseInt(this.num1)+parseInt(this.num2)}`
 }
 
+get diff(){
+    return `${parseInt(this.num1)-parseInt(this.num2)}`
+}
+
+get multip(){
+    return `${parseInt(this.num1)*parseInt(this.num2)}`
+}
+
+get division(){
+    return `${parseInt(this.num1)/parseInt(this.num2)}`
+}
+
+
+
 
 
 
