@@ -39,6 +39,6 @@ export default class OrderComponent extends LightningElement {
     buttonClick;
 
     handleOrderButton1(event){
-        this.buttonClick = event.target.;
+        this.buttonClick = event.target.buttonClick;
     }
 }
