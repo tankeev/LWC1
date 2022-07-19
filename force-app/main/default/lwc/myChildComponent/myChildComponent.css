@@ -1,0 +1,4 @@
+h2{
+    background-color: var(--custom-bg-color,bisque);
+    color: yellow;
+}

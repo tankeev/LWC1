@@ -1,0 +1,13 @@
+h1{
+    color: rgb(245, 114, 0);   
+}
+
+p{
+    color: rgb(0, 6, 126);
+}
+
+c-my-child-component{
+    color: black;
+    font-size: medium;
+    --custom-bg-color: rgb(255, 255, 255);
+}

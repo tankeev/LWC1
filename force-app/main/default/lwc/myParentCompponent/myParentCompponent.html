@@ -1,6 +1,14 @@
 <template>
-    <lightning-card>
-        <h2>This Parent Component</h2>
-        <p> this is parent paragraph</p>
+    <lightning-card title="Parent Component">
+        <div class="slds-box">
+            <h2 class="slds-text-heading_medium slds-m-bottom_medium">This Parent Component</h2>
+            <p> this is parent paragraph</p>
+            <p>Calling a child Component</p>
+            <h2>Parent h2 using hooks</h2>
+            <c-my-child-component></c-my-child-component>
+            <p>Text area of parent</p>
+            <p>Calling a child Component</p>
+            <c-my-child-component></c-my-child-component>
+        </div>   
     </lightning-card>
 </template>
