@@ -3,5 +3,14 @@
         <c-decorators-child>        
         </c-decorators-child>
     </lightning-card>
+
+    <lightning-card title="Personal Information">
+        <lightning-input 
+        label="Persons name"
+        type="text"
+        onchange={handlePerson}>
+        </lightning-input>
+        <h1>Name: {person.name} age:{person.age}</h1>
+    </lightning-card>
     
 </template>
