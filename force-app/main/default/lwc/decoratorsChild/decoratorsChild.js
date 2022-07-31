@@ -1,6 +1,5 @@
-import { LightningElement,api } from 'lwc';
+import { LightningElement,track } from 'lwc';
 
 export default class DecoratorsChild extends LightningElement {
-   @api firstName = 'John';
-
+   firstname = 'asda';
 }
