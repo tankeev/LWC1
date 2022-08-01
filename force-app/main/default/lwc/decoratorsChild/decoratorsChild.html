@@ -1,5 +1,12 @@
 <template>
     <lightning-card>
-        <h1> First Name: {person1}</h1>
+        <template if:true={accounts.data}>
+            <lightning-input
+            label="Account Search"
+            type="text"
+            onchange={handleAccount}></lightning-input>
+            <h1>key-field="Id" data={accounts.data}
+                columns={columns}</h1>
+        </template>
     </lightning-card>    
 </template>
