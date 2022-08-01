@@ -1,4 +1,5 @@
 public with sharing class accountFilter {
+    @AuraEnabled(cacheable=true)
     public static List<Account> getAccount(String filter){
 
         String keyName = '%'+filter+'%';

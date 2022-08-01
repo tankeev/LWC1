@@ -1,12 +1,17 @@
 <template>
-    <lightning-card>
-        <template if:true={accounts.data}>
-            <lightning-input
-            label="Account Search"
-            type="text"
-            onchange={handleAccount}></lightning-input>
-            <h1>key-field="Id" data={accounts.data}
-                columns={columns}</h1>
-        </template>
+    <lightning-card>        
+        <lightning-input
+        label="Account Search"
+        type="text"
+        onchange={handleAccount}></lightning-input>           
+    
+        <ul>
+            <template for:each={accounts.data} for:item="eachAccount">
+                <li key={eachAccount.id}>Account Name: {eachAccount.Name}</li>
+            </template>
+        </ul>
     </lightning-card>    
+    
+
 </template>
+
