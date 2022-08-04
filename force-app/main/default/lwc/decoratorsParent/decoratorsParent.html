@@ -1,8 +1,5 @@
 <template>
-    <lightning-card title="Parent card">
-        <c-decorators-child>        
-        </c-decorators-child>
-    </lightning-card>
+  
 
     <lightning-card title="Personal Information">
         <lightning-input 
@@ -11,6 +8,18 @@
         onchange={handlePerson}>
         </lightning-input>
         <h1>Name: {person.name} age:{person.age}</h1>
+    </lightning-card>
+
+    <lightning-card title="Track fam members">
+        <lightning-input label="Add Family Members" onblur={handleFamilyMembers}></lightning-input>
+            
+            <ul>
+               <template for:each={familyMembers} for:item="eachMember">
+                <li key={eachMember.id}>{eachMember.name}</li>
+               </template> 
+            </ul>
+        
+
     </lightning-card>
     
 </template>

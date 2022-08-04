@@ -9,4 +9,32 @@ export default class DecoratorsParent extends LightningElement {
     handlePerson(event){
         this.person.name = event.target.value
     }
+
+    @track 
+    familyMembers=[
+        {
+            name:'Sam',
+            id:0
+        },
+        {
+            name:'Pole',
+            id:1
+        }
+    ]
+    count=1;
+
+    handleFamilyMembers(event){
+        this.count++;
+        const newName = event.target.value
+        
+        const newObj = {
+            name:newName,
+            id:this.count
+        }
+
+        this.familyMembers.push(newObj)
+    }
+
+
+
 }
