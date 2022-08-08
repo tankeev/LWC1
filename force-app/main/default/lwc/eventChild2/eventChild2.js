@@ -1,14 +1,26 @@
 import { LightningElement } from 'lwc';
 
 export default class EventChild2 extends LightningElement {
-    inputValue2;
+    copyPerson;
+    person={
+        inputValueName:'',
+        inputValueSurname:''
+    }
+    
+    
+    //input name
+    handleChangeName(event){
+        this.person.inputValueName = event.detail.value;
+    }
 
-    handleChange2(event){
-        this.inputValue2 = event.detail.value;
+    //input surname
+    handleChangeSurname(event){
+        this.person.inputValueSurname = event.detail.value;
     }
 
     handleClick2(event){
-        const newEvent2 = new CustomEvent('clicked2',{detail:this.inputValue2})
+        this.copyPerson = Object.assign({},this.person)
+        const newEvent2 = new CustomEvent('clicked2',{detail:this.copyPerson})
         this.dispatchEvent(newEvent2)
     }
 }
