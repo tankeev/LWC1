@@ -3,7 +3,15 @@
         <c-event-child onclick={handleClick}></c-event-child>
     </lightning-card>
 
+    <lightning-card title="Parent">
+        <lightning-layout>
+            <lightning-layout-item>
+                <c-event-child2 onclicked2={handleClick12}></c-event-child2>
+                <h1>{eventName2}</h1>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
 
 
-    
+
 </template>
