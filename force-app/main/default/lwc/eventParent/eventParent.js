@@ -7,7 +7,7 @@ export default class EventParent extends LightningElement {
 
     eventName2;
     handleClick12(event){
-        this.eventName2 = event.detail.inputValueName+ ' | ' +event.detail.inputValueSurname;
+        this.eventName2 = event.detail.inputValueName+ ' | ' +event.detail.inputValueSurname +'age: ' +event.detail.inputvalueAge;
     }
     
 }

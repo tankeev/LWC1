@@ -4,13 +4,19 @@ export default class EventChild2 extends LightningElement {
     copyPerson;
     person={
         inputValueName:'',
-        inputValueSurname:''
+        inputValueSurname:'',
+        inputvalueAge:''
     }
     
     
     //input name
     handleChangeName(event){
         this.person.inputValueName = event.detail.value;
+    }
+    
+    //handle age
+    handleChangeAge(event){
+        this.person.inputvalueAge = event.detail.value;
     }
 
     //input surname
